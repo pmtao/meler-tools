@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Meler Tools：为 macOS 打造的实用工具。首个产品 Mac SVN Client 已开放下载。">
+  <meta name="theme-color" content="#0b1020">
+  <title>Meler Tools — 为 macOS 打造的实用工具</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header shell">
+    <a class="brand" href="#top"><span class="logo">M</span><span>Meler Tools</span></a>
+    <nav class="nav"><a href="#product">产品</a><a href="#features">功能</a><a href="#technology">技术</a><a href="#download">下载</a></nav>
+    <a class="cta" href="#download">获取应用</a>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy reveal">
+        <div class="eyebrow">Meler Tools · 首个产品</div>
+        <h1>让 Subversion<em>重新变得清晰。</em></h1>
+        <p class="lead">Mac SVN Client 是一个现代、快速、透明的 macOS 原生 SVN 客户端。清晰查看工作副本状态、差异、提交历史和仓库目录，同时保留每一次 SVN 操作的可见性。</p>
+        <div class="actions">
+          <a class="btn primary" href="https://github.com/user-attachments/files/29683897/MacSVNClient-0.1.0.dmg.zip">下载 Mac SVN Client 0.1.0</a>
+          <a class="btn secondary" href="https://github.com/pmtao/meler-tools">查看网站仓库</a>
+        </div>
+        <div class="meta"><span><i></i> macOS 14+</span><span><i></i> SwiftUI 原生体验</span><span><i></i> 基于系统 SVN</span></div>
+      </div>
+      <div class="visual reveal">
+        <div class="glow"></div>
+        <div class="window">
+          <div class="titlebar"><div class="traffic"><span></span><span></span><span></span></div><div class="title">Mac SVN Client</div><div></div></div>
+          <div class="app">
+            <aside class="sidebar"><div class="project">sample-project<small>Revision r248</small></div><div class="navlabel">WORKING COPY</div><div class="navitem active"><span>Changes</span><b>7</b></div><div class="navitem"><span>History</span></div><div class="navitem"><span>Repository</span></div></aside>
+            <section class="content"><div class="toolbar"><span class="seg">Flat · Grouped</span><span class="commit">Commit…</span></div><div class="heading"><span>LOCAL CHANGES</span><b>7 files</b></div><div class="row head"><span>Status</span><span>Path</span><span>Revision</span></div><div class="row sel"><span class="status m">M</span><span>Features/Changes/ChangesView.swift</span><span>r247</span></div><div class="row"><span class="status a">A</span><span>Features/History/HistoryFeature.swift</span><span>—</span></div><div class="row"><span class="status m">M</span><span>App/AppShellView.swift</span><span>r246</span></div><div class="row"><span class="status d">D</span><span>Shared/LegacyStatusView.swift</span><span>r241</span></div><div class="diff">118 private var toolbar: some View {<br><span class="plus">119 + HStack(spacing: 8) {</span><br><span class="plus">120 + Button("Commit…")</span></div></section>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="strip shell reveal"><span>专注日常 SVN 工作流</span><div><span>Working Copy</span><span>Diff</span><span>Commit</span><span>History</span><span>Repository</span></div></section>
+
+    <section id="features" class="section shell">
+      <div class="intro reveal"><div class="eyebrow">核心能力</div><h2>常用 SVN 操作，集中在一个清晰界面。</h2><p>不隐藏 Subversion 的工作方式，而是用更符合 macOS 的方式呈现它。</p></div>
+      <div class="grid">
+        <article class="card wide reveal"><div class="icon">⌁</div><h3>清晰掌握本地改动</h3><p>以平铺或语义分组方式查看 modified、added、deleted、missing、conflicted、ignored 等状态，并直接执行 Add、Delete、Move、Copy 和 Revert。</p></article>
+        <article class="card reveal"><div class="icon">±</div><h3>文本 Diff 与安全回退</h3><p>文本文件显示真实 patch；二进制文件提供安全预览与 BASE 保存能力。</p></article>
+        <article class="card reveal"><div class="icon">↑</div><h3>可控的提交流程</h3><p>选择提交范围、校验消息、最终确认、查看实时输出，并在失败后保留输入。</p></article>
+        <article class="card reveal"><div class="icon">◷</div><h3>Revision History</h3><p>按 revision、作者、日期和 changed paths 浏览记录，并比较两个 revision。</p></article>
+        <article class="card wide reveal"><div class="icon">▦</div><h3>Repository Browser</h3><p>浏览本地工作副本和远程仓库，支持 revision、历史、预览、Import、Export，以及 repository-side New Folder / Copy / Move / Delete。</p></article>
+      </div>
+    </section>
+
+    <section id="technology" class="dark section">
+      <div class="shell darkwrap">
+        <div class="reveal"><div class="eyebrow">原生体验</div><h2>复杂操作，保持透明和可恢复。</h2><p>每个长时间 SVN 操作都提供进度、取消、结果和诊断信息。优先解析 XML 输出，敏感凭据不会进入日志。</p></div>
+        <div class="terminal reveal"><div class="top">Operation Output</div><pre>$ svn commit --message &lt;redacted&gt; -- Sources/
+
+Sending        Sources/AppShellView.swift
+Adding         Sources/RepositoryBrowser.swift
+Transmitting file data ..done
+Committing transaction...
+
+<strong>Committed revision 248.</strong></pre></div>
+      </div>
+    </section>
+
+    <section id="product" class="section shell">
+      <div class="product reveal">
+        <div><div class="eyebrow">Meler Tools · Product 01</div><h2>Mac SVN Client 0.1.0</h2><p>首个公开测试版本已经开放下载。压缩包内包含可安装的 DMG。当前版本面向 macOS 14 及以上系统。</p><div class="future">未来这里还会继续发布更多 macOS 与开发者实用工具。</div></div>
+        <a id="download" class="btn primary download" href="https://github.com/user-attachments/files/29683897/MacSVNClient-0.1.0.dmg.zip">下载 DMG ZIP</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer shell"><div><strong>Meler Tools</strong><br><span>为 macOS 打造的实用工具</span></div><nav><a href="https://github.com/pmtao/meler-tools">GitHub</a><a href="https://github.com/user-attachments/files/29683897/MacSVNClient-0.1.0.dmg.zip">下载</a></nav></footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
